@@ -1,6 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/carla-simulator/scenario_runner.svg)
 [![Build Status](https://travis-ci.com/carla-simulator/scenario_runner.svg?branch=master)](https://travis-ci.com/carla/scenario_runner)
+[![Documentation Status](https://readthedocs.org/projects/carla-scenariorunner/badge/?version=latest)](https://carla-scenariorunner.readthedocs.io/en/latest/?badge=latest)
 
 
 ScenarioRunner for CARLA
@@ -23,7 +24,8 @@ branch contains the latest fixes and features, and may be required to use the la
 
 It is important to also consider the release version that has to match the CARLA version.
 
-* Version 0.9.6: Compatible with [CARLA 0.9.6](https://github.com/carla-simulator/carla/releases/tag/0.9.6)
+* Version 0.9.7 to come in December 2019
+* [Version 0.9.6](https://github.com/fabianoboril/scenario_runner/releases/tag/v0.9.6): Compatible with [CARLA 0.9.6](https://github.com/carla-simulator/carla/releases/tag/0.9.6)
 * [Version 0.9.5](https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.5) and [Version 0.9.5.1](https://github.com/carla-simulator/scenario_runner/releases/tag/v0.9.5.1): Compatible with [CARLA 0.9.5](https://github.com/carla-simulator/carla/releases/tag/0.9.5)
 * [Version 0.9.2](https://github.com/carla-simulator/scenario_runner/releases/tag/0.9.2): Compatible with [CARLA 0.9.2](https://github.com/carla-simulator/carla/releases/tag/0.9.2)
 
@@ -38,26 +40,17 @@ Using the ScenarioRunner
 Please take a look at our [Getting started](Docs/getting_started.md)
 documentation.
 
-Challenge Evaluation
----------------------
-
-You can evaluate your own agents using a reproduction
-of the CARLA Challenge by following [this tutorial](Docs/challenge_evaluation.md)
-
 
 Contributing
 ------------
 
-Please take a look at our [Contribution guidelines][contriblink].
-
-[contriblink]: http://carla.readthedocs.io/en/latest/CONTRIBUTING
+Please take a look at our [Contribution guidelines][Docs/CONTRIBUTING.md].
 
 
 F.A.Q.
 ------
 
-If you run into problems, check our
-[FAQ](http://carla.readthedocs.io/en/latest/faq/).
+If you run into problems, check our [FAQ](Docs/FAQ.md).
 
 
 License
