@@ -11,21 +11,18 @@ moving along the road and encounters a cyclist ahead after taking a right or lef
 
 from __future__ import print_function
 
+import math
 import py_trees
 
 import carla
 
+from srunner.scenariomanager.carla_data_provider import CarlaDataProvider, CarlaActorPool
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
 from srunner.scenariomanager.timer import TimeOut
 from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import *
-
-VEHICLE_TURNING_SCENARIOS = [
-    "VehicleTurningRight",
-    "VehicleTurningLeft"
-]
+from srunner.tools.scenario_helper import generate_target_waypoint
 
 
 def get_opponent_transform(_start_distance, waypoint, trigger_location, last_waypoint_lane):

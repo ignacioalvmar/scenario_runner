@@ -18,20 +18,19 @@ The ego vehicle adjusts its velocity or changes the lane as well.
 """
 
 import random
-
 import py_trees
-
 import carla
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
+from srunner.scenariomanager.carla_data_provider import CarlaActorPool
+from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorTransformSetter,
+                                                                      StopVehicle,
+                                                                      LaneChange,
+                                                                      WaypointFollower,
+                                                                      Idle)
+from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import InTriggerDistanceToVehicle, StandStill
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.tools.scenario_helper import *
-
-CHANGE_LANE_SCENARIOS = [
-    "ChangeLane"
-]
 
 
 class ChangeLane(BasicScenario):

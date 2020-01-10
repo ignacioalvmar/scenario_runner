@@ -501,12 +501,13 @@ class CarlaActorPool(object):
                 bp_filter = new_model
             print("WARNING: Actor model {} not available. Using instead {}".format(model, new_model))
             blueprint = random.choice(blueprint_library.filter(bp_filter))
+
         try:
             if color:
                 blueprint.set_attribute('color', color)
-        except:
-            pass
+        except Exception as e:
             # Color can't be set for this vehicle
+            print("WARNING: Color cannot be set for actor {} due to '{}'".format(model, e))
 
         # is it a pedestrian? -> make it mortal
         if blueprint.has_attribute('is_invincible'):

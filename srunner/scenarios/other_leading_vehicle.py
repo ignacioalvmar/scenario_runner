@@ -26,10 +26,6 @@ from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.tools.scenario_helper import get_waypoint_in_distance
 
-OTHER_LEADING_VEHICLE_SCENARIOS = [
-    "OtherLeadingVehicle"
-]
-
 
 class OtherLeadingVehicle(BasicScenario):
 

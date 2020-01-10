@@ -45,8 +45,6 @@ from srunner.scenarios.no_signal_junction_crossing import NoSignalJunctionCrossi
 from srunner.scenarios.maneuver_opposite_direction import ManeuverOppositeDirection
 
 
-ROUTESCENARIO = ["RouteScenario"]
-
 MAX_ALLOWED_RADIUS_SENSOR = 5.0
 SECONDS_GIVEN_PER_METERS = 0.4
 MAX_CONNECTION_ATTEMPTS = 5

@@ -17,17 +17,23 @@ vehicle stopped close enough to the leading vehicle
 """
 
 import random
-
 import py_trees
-
 import carla
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
+from srunner.scenariomanager.carla_data_provider import CarlaDataProvider, CarlaActorPool
+from srunner.scenariomanager.scenarioatomics.atomic_behaviors import (ActorTransformSetter,
+                                                                      StopVehicle,
+                                                                      KeepVelocity,
+                                                                      WaypointFollower,
+                                                                      ActorDestroy)
+from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
+from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToVehicle,
+                                                                               InTriggerDistanceToNextIntersection,
+                                                                               DriveDistance,
+                                                                               StandStill)
 from srunner.scenariomanager.timer import TimeOut
 from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import *
+from srunner.tools.scenario_helper import get_waypoint_in_distance
 
 FOLLOW_LEADING_VEHICLE_SCENARIOS = [
     "FollowLeadingVehicle",

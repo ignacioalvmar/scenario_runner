@@ -12,11 +12,14 @@ import py_trees
 
 from srunner.scenarioconfigs.route_scenario_configuration import RouteConfiguration
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import Idle
-from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
+from srunner.scenariomanager.scenarioatomics.atomic_criteria import (CollisionTest,
+                                                                     InRouteTest,
+                                                                     OnSidewalkTest,
+                                                                     RouteCompletionTest,
+                                                                     RunningRedLightTest,
+                                                                     RunningStopTest,
+                                                                     WrongLaneTest)
 from srunner.scenarios.basic_scenario import BasicScenario
-
-
-MASTER_SCENARIO = ["MasterScenario"]
 
 
 class MasterScenario(BasicScenario):

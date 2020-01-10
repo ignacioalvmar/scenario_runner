@@ -26,11 +26,6 @@ from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from srunner.scenariomanager.timer import TimeOut
 
 
-RUNNING_RED_LIGHT_SCENARIOS = [
-    "OppositeVehicleRunningRedLight"
-]
-
-
 class OppositeVehicleRunningRedLight(BasicScenario):
 
     """

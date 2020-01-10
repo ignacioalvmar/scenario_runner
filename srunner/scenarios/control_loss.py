@@ -13,18 +13,17 @@ regains control and corrects it's course.
 """
 
 import random
-
 import py_trees
+import carla
 
-from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
+from srunner.scenariomanager.carla_data_provider import CarlaDataProvider, CarlaActorPool
+from srunner.scenariomanager.scenarioatomics.atomic_behaviors import ChangeNoiseParameters, ActorTransformSetter
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
-from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
+from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import (InTriggerDistanceToLocation,
+                                                                               InTriggerDistanceToNextIntersection,
+                                                                               DriveDistance)
 from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import *
-
-CONTROL_LOSS_SCENARIOS = [
-    "ControlLoss"
-]
+from srunner.tools.scenario_helper import get_location_in_distance_from_wp
 
 
 class ControlLoss(BasicScenario):

@@ -16,11 +16,11 @@ import operator
 import carla
 from agents.navigation.local_planner import RoadOption
 
+from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
-from srunner.scenariomanager.timer import *
-
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
+from srunner.scenariomanager.timer import TimeOut, SimulationTimeCondition
 
 
 class OpenScenarioParser(object):

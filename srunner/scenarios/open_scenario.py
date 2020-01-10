@@ -17,8 +17,6 @@ from srunner.scenariomanager.timer import GameTime
 
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import SetOSCInitSpeed
 
-OPENSCENARIO = ["OpenScenario"]
-
 
 class Decorator(py_trees.behaviour.Behaviour):
 

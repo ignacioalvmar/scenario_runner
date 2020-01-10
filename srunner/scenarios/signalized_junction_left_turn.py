@@ -15,16 +15,12 @@ import py_trees
 import carla
 from agents.navigation.local_planner import RoadOption
 
+from srunner.scenariomanager.carla_data_provider import CarlaDataProvider, CarlaActorPool
 from srunner.scenariomanager.scenarioatomics.atomic_behaviors import *
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import *
 from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
 from srunner.scenarios.basic_scenario import BasicScenario
-from srunner.tools.scenario_helper import *
-
-
-TURN_LEFT_SIGNALIZED_JUNCTION_SCENARIOS = [
-    "SignalizedJunctionLeftTurn"
-]
+from srunner.tools.scenario_helper import generate_target_waypoint
 
 
 class SignalizedJunctionLeftTurn(BasicScenario):
@@ -54,7 +50,7 @@ class SignalizedJunctionLeftTurn(BasicScenario):
         self._traffic_light = None
         self._other_actor_transform = None
         self._blackboard_queue_name = 'SignalizedJunctionLeftTurn/actor_flow_queue'
-        self._queue = Blackboard().set(self._blackboard_queue_name, Queue())
+        self._queue = py_trees.blackboard.Blackboard().set(self._blackboard_queue_name, Queue())
         self._initialized = True
         super(SignalizedJunctionLeftTurn, self).__init__("TurnLeftAtSignalizedJunction",
                                                          ego_vehicles,

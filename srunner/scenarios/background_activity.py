@@ -15,9 +15,6 @@ from srunner.scenariomanager.carla_data_provider import CarlaActorPool
 from srunner.scenarios.basic_scenario import BasicScenario
 
 
-BACKGROUND_ACTIVITY_SCENARIOS = ["BackgroundActivity"]
-
-
 class BackgroundActivity(BasicScenario):
 
     """

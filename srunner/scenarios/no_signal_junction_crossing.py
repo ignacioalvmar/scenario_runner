@@ -20,11 +20,6 @@ from srunner.scenariomanager.scenarioatomics.atomic_trigger_conditions import *
 from srunner.scenarios.basic_scenario import BasicScenario
 
 
-NO_SIGNAL_JUNCTION_SCENARIOS = [
-    "NoSignalJunctionCrossing",
-]
-
-
 class NoSignalJunctionCrossing(BasicScenario):
 
     """

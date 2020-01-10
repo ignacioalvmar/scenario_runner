@@ -15,10 +15,6 @@ from srunner.scenariomanager.scenarioatomics.atomic_behaviors import Idle
 from srunner.scenariomanager.scenarioatomics.atomic_criteria import CollisionTest
 from srunner.scenarios.basic_scenario import BasicScenario
 
-FREERIDE_SCENARIOS = [
-    "FreeRide"
-]
-
 
 class FreeRide(BasicScenario):
 

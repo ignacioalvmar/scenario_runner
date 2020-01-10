@@ -19,11 +19,6 @@ from srunner.scenariomanager.timer import TimeOut
 from srunner.scenarios.basic_scenario import BasicScenario
 from srunner.tools.scenario_helper import *
 
-OBJECT_CROSSING_SCENARIOS = [
-    "StationaryObjectCrossing",
-    "DynamicObjectCrossing"
-]
-
 
 class StationaryObjectCrossing(BasicScenario):
 
